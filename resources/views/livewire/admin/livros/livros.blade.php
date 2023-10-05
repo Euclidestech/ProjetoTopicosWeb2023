@@ -21,7 +21,7 @@
         <tbody>
 
                 @forelse ($livros as $livro )
-                <tr class="bg-green-600 border-b border-green-300 hover:bg-green-500">
+                <tr class="bg-green-500 border-b border-green-300 hover:bg-green-500">
                     <td class="px-4 py-3" >{{$livro->titulo}}</td>
                     <td class="px-4 py-3" >{{$livro->Categoria}}</td>
                     <td class="px-4 py-3" >{{$livro->ano}}</td>
