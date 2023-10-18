@@ -10,7 +10,7 @@
             position: "right",
             stopOnFocus: true,
             style:{
-                backgroud:'#ccfbf1',
+                background:'#00FF7F',
                 borderTop:'4px solid #14b8a6',
                 color:'#134e4a'
             },
