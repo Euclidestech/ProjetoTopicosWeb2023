@@ -8,7 +8,7 @@
 
         <ul class="space-y-2 mt-6">
             <li>
-                <a href="#" class="px-2 py-3 flex items-center space-x-4
+                <a wire:navigate href="/livros" class="px-2 py-3 flex items-center space-x-4
                 text-green-500 hover:text-green-700">
                 <span >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
