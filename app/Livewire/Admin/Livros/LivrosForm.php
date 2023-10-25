@@ -2,27 +2,20 @@
 
 namespace App\Livewire\Admin\Livros;
 
+use App\Livewire\Forms\Admin\LivrosFormObject;
 use App\Models\Book;
 use Livewire\Component;
-
+use Livewire\Attributes\Rule;
 class LivrosForm extends Component
 {
-    public $titulo;
-    public $categoria;
-    public $ano;
-    public $descricao;
-    public $autor;
+    public LivrosFormObject $form;
 
     public function salvar(){
-        $livro = new Book();
+        $this->validate();
 
-        $livro->titulo = $this->titulo;
-        $livro->categoria = $this->categoria;
-        $livro->ano = $this->ano;
-        $livro->descricao = $this->descricao;
-        $livro->autor = $this->autor;
-
-        $livro->save();
+      Book::create(
+        $this->form->all()
+      );
 
         session()->flash('toast','Livro cadastrado com sucesso!');
 

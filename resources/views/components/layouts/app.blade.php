@@ -10,7 +10,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <title>Biblioteca</title>
 </head>
-<body>
+<body class="bg-gray-800 font-sans leading-normal tracking-normal mt-12">
     <x-admin.menu-lateral/>
     <main class="ml-auto mb-6 w-[85%]">
         <div class="px-6 pt-6">
