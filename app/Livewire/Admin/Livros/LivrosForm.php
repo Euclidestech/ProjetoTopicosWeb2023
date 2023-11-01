@@ -10,12 +10,29 @@ class LivrosForm extends Component
 {
     public LivrosFormObject $form;
 
+    public Book $livro;
+
+    public function mount(Book $livro){
+        $this->livro = $livro;
+        $this->form->preecherForm($livro);
+    }
+
     public function salvar(){
         $this->validate();
 
-      Book::create(
-        $this->form->all()
-      );
+        if(isset( $this->livro->id))
+        {
+            $this->livro->update($this->form->all());
+        }
+        else
+        {
+
+            Book::create(
+                $this->form->all()
+              );
+        }
+
+
 
         session()->flash('toast','Livro cadastrado com sucesso!');
 

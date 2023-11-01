@@ -28,6 +28,13 @@ class Livros extends Component
 
     }
 
+    public function deletar($id){
+        Book::destroy($id);
+
+        $this->dispatch('mostrarToast','Livro excluido com sucesso!');
+
+    }
+
     public function render()
     {
         $this->filtrarDados();

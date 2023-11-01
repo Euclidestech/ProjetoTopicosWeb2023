@@ -26,6 +26,7 @@
                 <th class="px-4 py-3">Ano</th>
                 <th class="px-4 py-3">Descrição</th>
                 <th class="px-4 py-3">Autor</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -37,6 +38,11 @@
                     <td class="px-4 py-3" >{{$livro->ano}}</td>
                     <td class="px-4 py-3" >{{$livro->descricao}}</td>
                     <td class="px-4 py-3" >{{$livro->autor}}</td>
+                    <td class="px-4 py-3">
+                        <x-admin.botao-editar href="/livros/{{$livro->id}}/editar" wire:navigate/>
+                        <x-admin.botao-delete wire:click="deletar({{$livro->id}})" wire:confirm="Deseja excluir o Livro?"/>
+
+                    </td>
 
                 </tr>
 

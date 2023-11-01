@@ -21,3 +21,5 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/','/livros');
 Route::get('/livros',Livros::class);
 Route::get('/livros/add',LivrosForm::class);
+Route::get('/livros/{livro}/editar',LivrosForm::class);
+
